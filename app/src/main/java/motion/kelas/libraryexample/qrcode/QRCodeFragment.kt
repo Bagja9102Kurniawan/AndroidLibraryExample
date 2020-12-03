@@ -8,12 +8,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat.checkSelfPermission
-import com.google.zxing.Result
-import kotlinx.android.synthetic.main.fragment_qrcode.*
-import kotlinx.android.synthetic.main.fragment_qrcode.view.*
-import kotlinx.android.synthetic.main.fragment_qrcode.view.tvResult
-import me.dm7.barcodescanner.zxing.ZXingScannerView
 
 import motion.kelas.libraryexample.R
 
