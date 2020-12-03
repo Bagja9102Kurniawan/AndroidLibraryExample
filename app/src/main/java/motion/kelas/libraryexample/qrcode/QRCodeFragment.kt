@@ -20,9 +20,11 @@ import motion.kelas.libraryexample.R
 /**
  * A simple [Fragment] subclass.
  */
-class QRCodeFragment : Fragment(), ZXingScannerView.ResultHandler  {
-    // Variable Global
-    lateinit var mScannerView: ZXingScannerView
+
+// TODO : Implement Class to ZXingScannerView.ResultHandler at line below
+class QRCodeFragment : Fragment()  {
+
+    // TODO : Put Variable Global Here !!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,43 +41,26 @@ class QRCodeFragment : Fragment(), ZXingScannerView.ResultHandler  {
     }
 
     private fun initScannerView() {
-        mScannerView = ZXingScannerView(activity!!)
-        mScannerView.setAutoFocus(true)
-        mScannerView.setResultHandler(this)
-        view?.flBarcode?.addView(mScannerView)
+        // TODO : Create ZXingScannerView Here !!!
+
     }
 
-    override fun handleResult(p0: Result?) {
-        view?.tvResult?.text = "Result : ${p0?.text}"
-    }
+    // TODO : OVERRIDE function Handle Result, uncomment this :
+//    override fun handleResult(p0: Result?) {
+//        view?.tvResult?.text = "Result : ${p0?.text}"
+//    }
 
-    override fun onStart() {
-        mScannerView.startCamera()
-        doRequestPermission()
-        super.onStart()
-    }
+    // TODO : Override onStart() Here !!!
 
-    override fun onPause() {
-        mScannerView.stopCamera()
-        super.onPause()
-    }
+    // TODO : Override onPause() Here !!!
+
+
 
     private fun doRequestPermission() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (checkSelfPermission(activity!!,Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-                requestPermissions(arrayOf(Manifest.permission.CAMERA), 100)
-            }
-        }
+        // TODO : add Request Permission
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        when (requestCode) {
-            100 -> {
-                initScannerView()
-            }
-            else -> {
-                /* nothing to do in here */
-            }
-        }
+        // TODO : fill when permission accept or decline here
     }
 }

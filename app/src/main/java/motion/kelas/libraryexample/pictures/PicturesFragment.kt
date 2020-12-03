@@ -31,12 +31,7 @@ class PicturesFragment : Fragment() {
     }
 
     private fun loadImage(view: View) {
-        Glide
-            .with(activity!!)
-            .load("https://media.giphy.com/media/7kn27lnYSAE9O/giphy.gif")
-            .centerCrop()
-            .placeholder(R.color.colorPrimaryDark)
-            .into(view.civPictures)
+        // TODO : Add glide here to load image from url then put at CircleImageView
     }
 
 }

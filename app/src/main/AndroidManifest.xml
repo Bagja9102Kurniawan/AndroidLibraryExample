@@ -2,8 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="motion.kelas.libraryexample">
 
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <!--    TODO : add uses permission camera here ! !-->
+
+    <!--    TODO : add uses permission internet here ! !-->
 
     <application
         android:allowBackup="true"
